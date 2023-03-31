@@ -62,6 +62,16 @@ export default {
     // Your API key for Etherscan
     // Obtain one at https://etherscan.io/
     apiKey: process.env.ETHERSCAN_API_KEY,
+    customChains: [
+      {
+        network: "tokamakgoerli",
+        chainId: 5050,
+        urls: {
+          apiURL: "https://goerli.explorer.tokamak.network/api",
+          browserURL: "https://goerli.explorer.tokamak.network"
+        }
+      }
+    ]
   },
   solidity: {
     compilers: [DEFAULT_COMPILER_SETTINGS],
