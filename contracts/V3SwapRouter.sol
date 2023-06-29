@@ -6,7 +6,7 @@ import '@uniswap/v3-core/contracts/libraries/SafeCast.sol';
 import '@uniswap/v3-core/contracts/libraries/TickMath.sol';
 import '@uniswap/v3-core/contracts/interfaces/IUniswapV3Pool.sol';
 import '@uniswap/v3-periphery/contracts/libraries/Path.sol';
-import '@uniswap/v3-periphery/contracts/libraries/PoolAddress.sol';
+import './libraries/PoolAddressTitan.sol';
 import '@uniswap/v3-periphery/contracts/libraries/CallbackValidation.sol';
 import '@openzeppelin/contracts/token/ERC20/IERC20.sol';
 
@@ -34,7 +34,7 @@ abstract contract V3SwapRouter is IV3SwapRouter, PeripheryPaymentsWithFeeExtende
         address tokenB,
         uint24 fee
     ) private view returns (IUniswapV3Pool) {
-        return IUniswapV3Pool(PoolAddress.computeAddress(factory, PoolAddress.getPoolKey(tokenA, tokenB, fee)));
+        return IUniswapV3Pool(PoolAddressTitan.computeAddress(factory, PoolAddressTitan.getPoolKey(tokenA, tokenB, fee)));
     }
 
     struct SwapCallbackData {
