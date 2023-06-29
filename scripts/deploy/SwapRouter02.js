@@ -19,9 +19,9 @@ UniswapInterfaceMulticall deployed to 0x4D2cfb9300f58225057c9c139B459c2B64bA5681
 */
 
 const _factoryV2 = "0x0000000000000000000000000000000000000000";
-const factoryV3 = "0x79d6318807A4d031eC4a896e3A079E115399fbcD";
-const _positionManager = "0x6A4514861c59Eb3F046Be89D47dD3123B159E768";
-const _WETH9 = "0x04C91015CC8910B031F2399E04802b51bf6582A1";
+const factoryV3 = "0x8C2351935011CfEccA4Ea08403F127FB782754AC";
+const _positionManager = "0x324d7015E30e7C231e4aC155546b8AbfEAB00977";
+const _WETH9 = "0x4200000000000000000000000000000000000006";
 
 const SwapRouter02Artifact = require("../../artifacts/contracts/SwapRouter02.sol/SwapRouter02.json");
 

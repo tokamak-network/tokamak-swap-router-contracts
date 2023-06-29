@@ -59,10 +59,10 @@ export default {
     },
     titan: {
       url: 'https://rpc.titan.tokamak.network',
-      //accounts: [`${process.env.PRIVATE_KEY1}`],
+      accounts: [`${process.env.PRIVATE_KEY}`],
       chainId: 55004,
-      gasPrice: 250000,
-      deploy: ['deploy_titan'],
+      gasPrice: 100000000,
+      //deploy: ['deploy_titan'],
     },
   },
   etherscan: {
