@@ -7,7 +7,7 @@ import '../interfaces/IOracleSlippage.sol';
 import '@uniswap/v3-periphery/contracts/base/PeripheryImmutableState.sol';
 import '@uniswap/v3-periphery/contracts/base/BlockTimestamp.sol';
 import '@uniswap/v3-periphery/contracts/libraries/Path.sol';
-import '@uniswap/v3-periphery/contracts/libraries/PoolAddress.sol';
+import '../libraries/PoolAddress.sol';
 import '@uniswap/v3-core/contracts/interfaces/IUniswapV3Pool.sol';
 import '@uniswap/v3-periphery/contracts/libraries/OracleLibrary.sol';
 

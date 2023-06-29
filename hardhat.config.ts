@@ -40,7 +40,7 @@ export default {
       chainId: 5050,
       url: `https://goerli.optimism.tokamak.network`,
       timeout: 200000,
-      accounts: [`${process.env.PRIVATE_KEY}` ]
+      accounts: [`${process.env.PRIVATE_KEY}`],
     },
     kovan: {
       url: `https://kovan.infura.io/v3/${process.env.INFURA_API_KEY}`,
@@ -57,6 +57,13 @@ export default {
     optimism: {
       url: `https://mainnet.optimism.io`,
     },
+    titan: {
+      url: 'https://rpc.titan.tokamak.network',
+      //accounts: [`${process.env.PRIVATE_KEY1}`],
+      chainId: 55004,
+      gasPrice: 250000,
+      deploy: ['deploy_titan'],
+    },
   },
   etherscan: {
     // Your API key for Etherscan
@@ -64,14 +71,22 @@ export default {
     apiKey: process.env.ETHERSCAN_API_KEY,
     customChains: [
       {
-        network: "tokamakgoerli",
+        network: 'tokamakgoerli',
         chainId: 5050,
         urls: {
-          apiURL: "https://goerli.explorer.tokamak.network/api",
-          browserURL: "https://goerli.explorer.tokamak.network"
-        }
-      }
-    ]
+          apiURL: 'https://goerli.explorer.tokamak.network/api',
+          browserURL: 'https://goerli.explorer.tokamak.network',
+        },
+      },
+      {
+        network: 'titan',
+        chainId: 55004,
+        urls: {
+          apiURL: 'https://explorer.titan.tokamak.network/api',
+          browserURL: 'https://explorer.titan.tokamak.network',
+        },
+      },
+    ],
   },
   solidity: {
     compilers: [DEFAULT_COMPILER_SETTINGS],
