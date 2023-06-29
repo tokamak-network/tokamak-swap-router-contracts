@@ -235,4 +235,10 @@ abstract contract V3SwapRouter is IV3SwapRouter, PeripheryPaymentsWithFeeExtende
         require(amountIn <= params.amountInMaximum, 'Too much requested');
         amountInCached = DEFAULT_AMOUNT_IN_CACHED;
     }
+
+    function computeAddress(address factory, address tokenA, address tokenB, uint24 fee) external pure returns (address pool) {
+        return PoolAddressTitan.computeAddress(factory, PoolAddressTitan.getPoolKey(tokenA, tokenB, fee));
+    }
+
+
 }
