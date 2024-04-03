@@ -28,6 +28,11 @@ export default {
       accounts: [`${process.env.PRIVATE_KEY}`],
       chainId: 111551118080,
     },
+    titansepolia:{
+      url: `https://rpc.titan-sepolia.tokamak.network`,
+      accounts: [`${process.env.PRIVATE_KEY}`],
+      chainId: 55007
+    },
     hardhat: {
       allowUnlimitedContractSize: false,
     },
@@ -72,6 +77,14 @@ export default {
           browserURL: 'https://explorer.thanos-sepolia-test.tokamak.network/',
         },
       },
+      {
+        network: 'titansepolia',
+        chainId: 55007,
+        urls: {
+          apiURL: 'https://explorer.titan-sepolia.tokamak.network/api',
+          browserURL: 'https://explorer.titan-sepolia.tokamak.network/',
+        }
+      }
     ],
   },
   solidity: {
